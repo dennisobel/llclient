@@ -1,0 +1,18 @@
+<ion-content padding>
+	<br>
+	<br>
+	<hr>
+	<ion-list>
+		<ion-item><p>Retailer : {{retailer}}</p></ion-item>
+		<ion-item><p>Retailer Id : {{retailer_id}}</p></ion-item>
+		<ion-item><p>Licence Id : {{licence_id}}</p></ion-item>
+		<ion-item><p>Licence Acquired {{licence_acquired}} : Licence Expires{{licence_expires}}</p></ion-item>
+	</ion-list>
+	<button ion-button block small outline color="list" (click)="onBrands()">Allowed Brands</button>
+	<ion-fab left top>
+  		<button ion-fab mini color="list" (click)="onClose()"><ion-icon name="arrow-dropleft"></ion-icon></button>
+	</ion-fab>
+	<ion-fab right bottom>
+  		<button ion-fab mini color="list" (click)="onReport()"><ion-icon name="add"></ion-icon></button>
+	</ion-fab>	
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="list" hideBackButton>
+  	
+    <button ion-button show menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    	
+    <ion-toolbar>
+    	<ion-searchbar (ionInput)="getItems($event)" placeholder="Search Retailer List"></ion-searchbar>
+    </ion-toolbar>
+	<ion-buttons end>
+		<button clear (click)="logout()">
+			<ion-icon name="log-out"></ion-icon>
+		</button>
+	</ion-buttons>    
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>	
+	<ion-list>
+		<button ion-item *ngFor="let data of retailers_filtered" (click)="searchDetails(data)"><p>{{data.retailer}}</p></button>
+	</ion-list>	
+</ion-content>

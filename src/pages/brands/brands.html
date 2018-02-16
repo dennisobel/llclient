@@ -1,0 +1,14 @@
+<ion-content padding>
+	<ion-slides pager>
+		<ion-slide *ngFor="let data of brands">
+			<img [src]="data.img" class="slide-image"/>
+			<br>
+			<hr>
+			<ion-badge color="dark">{{data.name}}</ion-badge>
+		</ion-slide>
+	</ion-slides>
+
+	<ion-fab right bottom>
+  		<button ion-fab mini color="list" (click)="onClose()"><ion-icon name="close"></ion-icon></button>
+	</ion-fab>	
+</ion-content>

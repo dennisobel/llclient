@@ -1,0 +1,42 @@
+<ion-content padding class="no-scroll" text-center>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>    
+    <br>
+    <br>     
+    
+    <ion-list>
+        <ion-item>
+            <ion-label stacked>Username</ion-label>
+            <ion-input  
+            (change)="onUsername($event)"
+            [(ngModel)]="username"
+            id="username"
+            class="username"
+            ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>Password</ion-label>
+            <ion-input 
+            (change)="onPassword($event)"
+            [(ngModel)]="password"
+            type="password" 
+            id="password"
+            class="password" ></ion-input>
+        </ion-item>
+        
+        <button ion-button
+         small
+         outline 
+         block 
+         color="list"          
+         id="login"
+         (click)="login()">Login</button>
+    </ion-list>
+
+</ion-content>
